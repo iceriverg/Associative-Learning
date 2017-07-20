@@ -61,8 +61,7 @@ class ALModule:
 		return np.asarray(output)	
 
 	def getWalkerLoss(self):
-		return tf.reduce_sum(tf.nn.softmax_cross_entropy_with_logits(
-													logits=self.computePaba(), labels=self.getCorrectRoundTrip())
+		return tf.reduce_sum(tf.nn.softmax_cross_entropy_with_logits(logits=self.computePaba(), labels=self.getCorrectRoundTrip()))
 
 	def getVisitLoss(self):
 
